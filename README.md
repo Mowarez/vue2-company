@@ -6,6 +6,7 @@
 docker build -t company-image . 
 
 2. én magam a docker-local-environment docker-compose fájlába beletettem a következőt:
+```
 remote-app:
     image: company-image
     hostname: sr-remote-app
@@ -14,6 +15,7 @@ remote-app:
     networks:
       static-network:
         ipv4_address: 172.30.128.57
+```
 ezzel azt is eléred, hogy az Aurora contineren belülről is tudsz majd rá hivatkozni az IP címmel.
 
 
